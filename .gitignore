@@ -47,8 +47,14 @@ typings/
 # TypeScript cache
 *.tsbuildinfo
 
+# local env files
+.env.local
+.env.*.local
+
 # Optional npm cache directory
 .npm
+yarn.lock
+package-lock.json
 
 # Optional eslint cache
 .eslintcache
