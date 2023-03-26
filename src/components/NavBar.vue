@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <!-- <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <router-link class="navbar-brand fs-3" to="/">
         <img src="../assets/images/logo.svg" class="px-3" alt="" height="40" />
@@ -35,7 +35,29 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="main-logo"><img src="../assets/images/logo.svg" class="px-3" alt="" height="40" /></div>
+      <nav>
+        <ul class="main-menu">
+          <li><router-link to="/shop" class="nav-link" aria-current="page"
+              >Produtos</router-link
+            ></li>
+          <li><router-link to="/cart" class="nav-link" aria-current="page"
+              >
+              <i class="bi bi-cart"></i>
+              <span class="badge text-bg-secondary">{{
+                this.$store.state.cart
+              }}</span></router-link
+            ></li>
+          <li><a href="#"><span class="fa fa-search"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </template>
 
 <script>
