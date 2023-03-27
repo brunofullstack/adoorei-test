@@ -1,17 +1,16 @@
 <template>
   <section id="section-1">
     <div class="content-slider">
-      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
-      <input type="radio" id="banner2" class="sec-1-input" name="banner">
-      <input type="radio" id="banner3" class="sec-1-input" name="banner">
-      <input type="radio" id="banner4" class="sec-1-input" name="banner">
+      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked />
+      <input type="radio" id="banner2" class="sec-1-input" name="banner" />
+      <input type="radio" id="banner3" class="sec-1-input" name="banner" />
+      <input type="radio" id="banner4" class="sec-1-input" name="banner" />
       <div class="slider">
         <div id="top-banner-1" class="banner">
           <div class="banner-inner-wrapper">
             <h2>Teste prático</h2>
-            <h1>Seja bem<br>to MoGo</h1>
+            <h3>Bruno Carvalho Teixeira<br />brunofullstack@gmail.com</h3>
             <div class="line"></div>
-            <div class="learn-more-button"><a href="#section-2">Learn More</a></div>
           </div>
         </div>
       </div>
@@ -89,7 +88,7 @@ export default {
   transition: 0.1s;
 }
 .main-header .header-wrapper .main-menu li a span {
-  font-size: 1.2em;
+  font-size: .9em;
 }
 .main-header .header-wrapper .main-menu li:last-child {
   padding: 0.75em 0;
@@ -112,11 +111,15 @@ export default {
   display: none;
 }
 #section-1 .content-slider .slider {
-  position: relative;
   width: inherit;
   height: inherit;
   overflow: hidden;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
 #section-1 .content-slider .slider .banner {
   position: absolute;
   top: 0;
@@ -135,13 +138,6 @@ export default {
   padding-top: 6em;
   background-image: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
   box-sizing: border-box;
-}
-#section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
-  padding-bottom: 0.3em;
-  font-family: "Kaushan Script", cursive;
-  font-weight: 400;
-  font-size: 2.5em;
-  text-transform: none;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
   font-size: 6em;
@@ -295,7 +291,8 @@ export default {
     width: 57%;
   }
   #section-1 {
-    height: 46em;
+    /*height: 46em;*/
+    height: 100vh;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
     padding-top: 12em;
@@ -447,5 +444,13 @@ export default {
   #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
     margin: 1.7em auto;
   }
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 </style>

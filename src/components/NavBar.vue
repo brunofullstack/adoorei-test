@@ -37,23 +37,32 @@
     </div>
   </nav> -->
 
-
-  <header class="main-header">
+  <header
+    class="main-header"
+    :class="this.$route.name == 'home' ? 'transparent' : 'colored'"
+  >
     <div class="header-wrapper">
-      <div class="main-logo"><img src="../assets/images/logo.svg" class="px-3" alt="" height="40" /></div>
+      <router-link to="/" class="main-logo"
+        ><img src="../assets/images/logo.svg" class="px-3" alt="" height="40"
+      /></router-link>
       <nav>
         <ul class="main-menu">
-          <li><router-link to="/shop" class="nav-link" aria-current="page"
+          <li>
+            <router-link to="/shop" class="nav-link" aria-current="page"
               >Produtos</router-link
-            ></li>
-          <li><router-link to="/cart" class="nav-link" aria-current="page"
-              >
-              <i class="bi bi-cart"></i>
+            >
+          </li>
+          <li>
+            <router-link to="/cart" class="nav-link" aria-current="page">
+              <i class="bi bi-cart" style="font-size: 1.5em;"></i>
               <span class="badge text-bg-secondary">{{
                 this.$store.state.cart
               }}</span></router-link
-            ></li>
-          <li><a href="#"><span class="fa fa-search"></span></a></li>
+            >
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-search"></span></a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -98,5 +107,14 @@ export default {
 .nav-item:hover::before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+.transparent {
+  background: transparent;
+}
+
+.colored {
+  background-color: rgba(127, 127, 127, 0.15);
+  color: #000 !important
 }
 </style>
