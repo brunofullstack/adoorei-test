@@ -111,9 +111,13 @@ export default {
   display: none;
 }
 #section-1 .content-slider .slider {
+  position: relative;
   width: inherit;
   height: inherit;
   overflow: hidden;
+}
+#section-1 .content-slider .center {
+  position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
